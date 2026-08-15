@@ -139,8 +139,7 @@
         .brand {
     display: inline-flex;
     align-items: center;
-
-    width: 135px;
+    width: 145px;
     height: auto;
 }
 
@@ -316,6 +315,7 @@
 
 .hero-main-image img {
     width: 100%;
+    max-width: 560px;
     height: auto;
 
     object-fit: contain;
@@ -1055,174 +1055,27 @@
         }
 
 
+        
+
+        
         /* =========================================
-           TABLET
+           HERO
         ========================================= */
 
-        @media (max-width: 1000px) {
 
-            .hero {
-                min-height: auto;
-                padding: 85px 0;
-            }
-
-            .hero-grid {
-                grid-template-columns:
-                    1fr 0.9fr;
-
-                gap: 40px;
-            }
-
-            .hero h1 {
-                font-size: 54px;
-            }
-
-            .hero-main-image {
-                height: 470px;
-            }
-
-            .hero-visual {
-                min-height: 470px;
-            }
-        }
+        
 
 
-        /* =========================================
-           TABLET / MOBILE
-        ========================================= */
+        
 
-        @media (max-width: 900px) {
-
-            .nav-links {
-                display: none;
-            }
-
-            .hero-grid,
-            .proof-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .hero {
-                padding:
-                    70px 0 80px;
-            }
-
-            .hero-copy {
-                text-align: center;
-            }
-
-            .hero h1,
-            .hero-text {
-                margin-left: auto;
-                margin-right: auto;
-            }
-
-            .hero-actions,
-            .trust-row {
-                justify-content: center;
-            }
-
-            .hero-visual {
-                min-height: 460px;
-                margin-top: 10px;
-            }
-
-            .hero-main-image {
-                height: 460px;
-            }
-
-            .choice-grid {
-                grid-template-columns:
-                    repeat(2, 1fr);
-            }
-
-            .service-grid,
-            .benefit-grid,
-            .steps,
-            .price-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .floating-card {
-                left: 12px;
-            }
-        }
+        
 
 
-        /* =========================================
-           MOBILE
-        ========================================= */
+       
 
-        @media (max-width: 560px) {
+       
 
-            .container {
-                width:
-                    calc(100% - 28px);
-            }
-
-            .nav {
-                height: 68px;
-            }
-
-            .nav-cta {
-                padding: 10px 13px;
-                font-size: 12px;
-            }
-
-            .hero {
-                padding:
-                    55px 0 60px;
-            }
-
-            .hero h1 {
-                font-size: 45px;
-                letter-spacing: -2.5px;
-            }
-
-            .hero-text {
-                font-size: 16px;
-            }
-
-            .hero-actions .btn {
-                width: 100%;
-            }
-
-            .hero-visual {
-                min-height: 340px;
-            }
-
-            .hero-main-image {
-                height: 340px;
-            }
-
-            .choice-grid {
-                grid-template-columns: 1fr;
-            }
-
-            .section {
-                padding: 70px 0;
-            }
-
-            .business-banner,
-            .footer-inner {
-                align-items: flex-start;
-
-                flex-direction: column;
-            }
-
-            .whatsapp {
-                right: 14px;
-                bottom: 14px;
-            }
-
-            .final-cta {
-                padding: 42px 20px;
-            }
-        }
-
-        /* =========================================
-   FOOTER
-========================================= */
+        
 
 .site-footer {
     padding: 75px 0 25px;
@@ -1434,7 +1287,7 @@
    FOOTER RESPONSIVE
 ========================================= */
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
 
     .footer-main {
         grid-template-columns:
@@ -1452,8 +1305,7 @@
 
 }
 
-
-@media (max-width: 560px) {
+@media (max-width: 768px) {
 
     .site-footer {
         padding: 55px 0 22px;
@@ -1461,9 +1313,7 @@
 
     .footer-main {
         grid-template-columns: 1fr 1fr;
-
         gap: 35px 25px;
-
         padding-bottom: 40px;
     }
 
@@ -1477,15 +1327,560 @@
 
     .footer-bottom {
         align-items: flex-start;
-
         flex-direction: column;
-
         gap: 10px;
     }
 
+}
+
+@media (max-width: 480px) {
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 30px;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        grid-column: span 1;
+    }
+
+}
+    
+/* =========================================
+   RESPONSIVE - BARU
+========================================= */
+
+/* TABLET BESAR */
+@media (max-width: 1100px) {
+
+    .container {
+        width: min(100% - 40px, 960px);
+    }
+
+    .hero {
+        min-height: auto;
+        padding: 85px 0;
+    }
+
+    .hero-grid {
+        grid-template-columns: minmax(0, 1fr) minmax(360px, 0.85fr);
+        gap: 45px;
+    }
+
+    .hero h1 {
+        font-size: clamp(46px, 5vw, 60px);
+        letter-spacing: -3px;
+    }
+
+    .hero-text {
+        font-size: 17px;
+    }
+
+    .hero-visual {
+        min-height: 430px;
+    }
+
+    .hero-main-image {
+        height: auto;
+    }
+
+    .hero-main-image img {
+        width: 100%;
+        max-width: 500px;
+    }
+
+    .choice-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .service-grid,
+    .benefit-grid,
+    .steps,
+    .price-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .proof-grid {
+        grid-template-columns: 0.9fr 1.1fr;
+        gap: 40px;
+    }
+
+}
+
+
+/* TABLET */
+@media (max-width: 850px) {
+
+    .container {
+        width: calc(100% - 36px);
+    }
+
+
+    /* NAVBAR */
+
+    .nav {
+        height: 70px;
+        gap: 15px;
+    }
+
+    .brand {
+        width: 125px;
+        flex-shrink: 0;
+    }
+
+    .nav-links {
+        display: none;
+    }
+
+    .nav > .btn {
+        padding: 11px 15px;
+        font-size: 12px;
+        white-space: nowrap;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 70px 0 75px;
+    }
+
+    .hero-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+        text-align: center;
+    }
+
+    .hero-copy {
+        max-width: 700px;
+        margin: 0 auto;
+    }
+
+    .hero h1 {
+        max-width: 650px;
+        margin: 20px auto;
+        font-size: clamp(44px, 7vw, 58px);
+        letter-spacing: -2.8px;
+    }
+
+    .hero-text {
+        max-width: 620px;
+        margin: 0 auto 27px;
+        font-size: 16px;
+    }
+
+    .hero-actions {
+        justify-content: center;
+    }
+
+    .trust-row {
+        justify-content: center;
+    }
+
+    .hero-visual {
+        min-height: 0;
+        margin-top: 5px;
+    }
+
+    .hero-main-image {
+        height: auto;
+    }
+
+    .hero-main-image img {
+        width: min(100%, 520px);
+        max-height: 480px;
+        object-fit: contain;
+    }
+
+
+    /* FLOATING CARD */
+
+    .floating-card {
+        left: 15px;
+        bottom: 20px;
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 75px 0;
+    }
+
+
+    /* PROOF */
+
+    .proof-grid {
+        grid-template-columns: 1fr;
+        gap: 35px;
+    }
+
+    .proof-grid > div {
+        text-align: center;
+    }
+
+    .proof-grid h2 {
+        font-size: clamp(32px, 6vw, 44px);
+    }
+
+    .proof-image {
+        width: min(100%, 650px);
+        margin: 0 auto;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 60px 0 25px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr 1fr;
+        gap: 35px 25px;
+    }
+
+    .footer-brand {
+        grid-column: span 2;
+    }
+
+    .footer-contact {
+        grid-column: span 2;
+    }
+
+    .footer-bottom {
+        align-items: flex-start;
+        flex-direction: column;
+        gap: 10px;
+    }
+}
+
+
+/* HP */
+@media (max-width: 600px) {
+
+    .container {
+        width: calc(100% - 28px);
+    }
+
+
+    /* NAVBAR */
+
+    .nav {
+        height: 66px;
+        gap: 10px;
+    }
+
+    .brand {
+        width: 115px;
+    }
+
+    .nav > .btn {
+        padding: 10px 13px;
+        border-radius: 10px;
+        font-size: 11px;
+    }
+
+
+    /* HERO */
+
+    .hero {
+        padding: 55px 0 60px;
+    }
+
+    .eyebrow {
+        padding: 6px 9px;
+        font-size: 9px;
+        letter-spacing: 0.08em;
+    }
+
+    .hero h1 {
+        margin: 17px auto;
+        font-size: clamp(38px, 11vw, 48px);
+        line-height: 1.05;
+        letter-spacing: -2.3px;
+    }
+
+    .hero-text {
+        font-size: 15px;
+        line-height: 1.65;
+    }
+
+    .hero-actions {
+        width: 100%;
+        gap: 9px;
+    }
+
+    .hero-actions .btn {
+        width: 100%;
+        min-height: 48px;
+    }
+
+    .trust-row {
+        gap: 8px 14px;
+        margin-top: 18px;
+        font-size: 10px;
+    }
+
+    .hero-visual {
+        margin-top: 5px;
+    }
+
+    .hero-main-image {
+        height: auto;
+    }
+
+    .hero-main-image img {
+        width: 100%;
+        max-width: 430px;
+    }
+
+
+    /* FLOATING CARD */
+
+    .floating-card {
+        left: 8px;
+        bottom: 8px;
+        padding: 11px 13px;
+        gap: 8px;
+        border-radius: 13px;
+    }
+
+
+    /* SECTION */
+
+    .section {
+        padding: 62px 0;
+    }
+
+    .section-label {
+        font-size: 10px;
+    }
+
+    .section-heading h2 {
+        margin: 8px 0 11px;
+        font-size: clamp(28px, 8vw, 36px);
+        letter-spacing: -1.3px;
+    }
+
+    .section-heading p {
+        font-size: 14px;
+        line-height: 1.65;
+    }
+
+
+    /* CARD */
+
+    .choice-grid,
+    .service-grid,
+    .benefit-grid,
+    .steps,
+    .price-grid {
+        grid-template-columns: 1fr;
+        gap: 12px;
+        margin-top: 28px;
+    }
+
+    .choice-card {
+        padding: 20px;
+        border-radius: 16px;
+    }
+
+    .service-card {
+        padding: 22px;
+        border-radius: 17px;
+    }
+
+    .benefit-card,
+    .step,
+    .price-card {
+        border-radius: 16px;
+    }
+
+
+    /* PROOF */
+
+    .proof-grid {
+        gap: 27px;
+    }
+
+    .proof-grid h2 {
+        font-size: clamp(30px, 9vw, 38px);
+    }
+
+    .proof-image {
+        width: 100%;
+        border-radius: 18px;
+    }
+
+
+    /* HARGA */
+
+    .price-card {
+        padding: 23px;
+    }
+
+    .price {
+        font-size: 28px;
+    }
+
+    .business-banner {
+        align-items: stretch;
+        flex-direction: column;
+        gap: 15px;
+        padding: 19px;
+        border-radius: 16px;
+    }
+
+    .business-banner .btn {
+        width: 100%;
+    }
+
+
+    /* FAQ */
+
+    .faq-list {
+        margin-top: 28px;
+    }
+
+    .faq-list details {
+        margin: 7px 0;
+        padding: 0 16px;
+        border-radius: 13px;
+    }
+
+    .faq-list summary {
+        padding: 16px 0;
+        font-size: 13px;
+    }
+
+    .faq-list p {
+        font-size: 12px;
+        line-height: 1.65;
+    }
+
+
+    /* FINAL CTA */
+
+    .final-cta {
+        padding: 40px 18px;
+        border-radius: 21px;
+    }
+
+    .final-cta h2 {
+        font-size: clamp(29px, 8vw, 36px);
+        letter-spacing: -1.3px;
+    }
+
+    .final-cta .btn {
+        width: 100%;
+        min-height: 48px;
+    }
+
+
+    /* WHATSAPP */
+
+    .whatsapp {
+        right: 12px;
+        bottom: 12px;
+        padding: 11px 14px;
+        font-size: 11px;
+    }
+
+
+    /* FOOTER */
+
+    .site-footer {
+        padding: 50px 0 20px;
+    }
+
+    .footer-main {
+        grid-template-columns: 1fr;
+        gap: 28px;
+    }
+
+    .footer-brand,
+    .footer-contact {
+        grid-column: span 1;
+    }
+
+    .footer-logo {
+        width: 130px;
+    }
+
+    .footer-brand > p {
+        max-width: 100%;
+        font-size: 12px;
+    }
+
+    .footer-column h4 {
+        font-size: 12px;
+    }
+
+    .footer-column a {
+        font-size: 11px;
+    }
+
+    .footer-contact p {
+        max-width: 100%;
+        font-size: 11px;
+    }
+
+    .footer-contact > a {
+        font-size: 13px;
+    }
+}
+
+
+/* HP KECIL */
+@media (max-width: 380px) {
+
+    .container {
+        width: calc(100% - 24px);
+    }
+
+    .nav {
+        height: 62px;
+    }
+
+    .brand {
+        width: 105px;
+    }
+
+    .nav > .btn {
+        padding: 9px 11px;
+        font-size: 10px;
+    }
+
+    .hero {
+        padding-top: 48px;
+    }
+
+    .hero h1 {
+        font-size: 36px;
+        letter-spacing: -2px;
+    }
+
+    .hero-text {
+        font-size: 14px;
+    }
+
+    .section {
+        padding: 55px 0;
+    }
+
+    .section-heading h2 {
+        font-size: 27px;
+    }
+
+    .final-cta {
+        padding: 35px 15px;
+    }
+}
 
     
-}
+
 
 /* =========================================
    SCROLL REVEAL EFFECT
@@ -1743,6 +2138,121 @@
 
 }
 
+/* =========================================
+   FOOTER MOBILE - COMPACT
+========================================= */
+
+@media (max-width: 600px) {
+
+    .site-footer {
+        padding: 42px 0 18px;
+    }
+
+    .footer-main {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 30px 24px;
+        padding-bottom: 28px;
+    }
+
+    /* BRAND */
+
+    .footer-brand {
+        grid-column: 1 / -1;
+        max-width: 100%;
+    }
+
+    .footer-logo {
+        width: 120px;
+    }
+
+    .footer-brand > p {
+    max-width: 330px;
+    margin: 10px 0 16px;
+
+    font-size: 13px;
+    line-height: 1.7;
+}
+
+    .footer-instagram {
+        padding: 9px 13px;
+
+        font-size: 10px;
+        border-radius: 9px;
+    }
+
+    .footer-instagram svg {
+        width: 16px;
+        height: 16px;
+    }
+
+
+    /* COLUMN */
+
+    .footer-column {
+        align-items: flex-start;
+    }
+
+    .footer-column h4 {
+    margin-bottom: 10px;
+    font-size: 14px;
+}
+
+.footer-column a {
+    margin: 4px 0;
+
+    font-size: 13px;
+    line-height: 1.5;
+}
+
+
+    /* CONTACT */
+
+    .footer-contact {
+        grid-column: 1 / -1;
+    }
+
+    .footer-contact p {
+    max-width: 320px;
+    margin-bottom: 8px;
+
+    font-size: 13px;
+    line-height: 1.6;
+}
+
+.footer-contact > a {
+    font-size: 14px;
+}
+
+.footer-contact span {
+    display: block;
+    margin-top: 5px;
+
+    font-size: 11px;
+}
+
+
+    /* BOTTOM */
+
+    .footer-bottom {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: space-between;
+
+        gap: 10px;
+        padding-top: 16px;
+    }
+
+    .footer-bottom p {
+    font-size: 11px;
+}
+
+.footer-bottom-links a {
+    font-size: 11px;
+}
+
+}
     </style>
 </head>
 
@@ -2326,43 +2836,40 @@
 
         <section class="section section-soft">
 
-            <div class="container proof-grid">
+    <div class="container proof-grid">
 
-                <div>
+        <div>
 
-                    <span class="section-label">
-                        BUKTI PEKERJAAN
-                    </span>
+            <span class="section-label">
+                BUKTI PEKERJAAN
+            </span>
 
-                    <h2>
-                        Bukan sekadar janji.
-                    </h2>
+            <h2>
+                Bukan sekadar janji.
+            </h2>
 
-                    <p class="section-text">
-                        Tampilkan bukti hasil pengurusan dan
-                        testimoni klien di sini.
-                        Data sensitif sebaiknya disamarkan
-                        demi menjaga privasi.
-                    </p>
+            <p class="section-text">
+    Lihat beberapa bukti hasil pengurusan dan
+    pengalaman klien yang telah menggunakan
+    layanan Octora Legal.
+    Data sensitif telah disamarkan demi menjaga privasi.
+</p>
 
-                    <a href="#kontak" class="btn btn-secondary">
-                        Tanyakan Proses →
-                    </a>
+            <a href="#kontak" class="btn btn-secondary">
+                Tanyakan Proses →
+            </a>
 
-                </div>
+        </div>
 
+        <img
+            class="proof-image"
+            src="https://i.ibb.co.com/ghc2WDc/Frame-1261165094-1.png"
+            alt="Bukti pengurusan legalitas Octora Legal"
+        >
 
-                <img
-    class="proof-image"
-    src="https://i.ibb.co.com/ghc2WDc/Frame-1261165094-1.png"
-    alt="Bukti pengurusan legalitas Octora Legal"
->
+    </div>
 
-</div>
-
-            </div>
-
-        </section>
+</section>
 
 
         <!-- =========================================
